@@ -1,3 +1,5 @@
+flask
+requests
+pdfplumber
 streamlit
 google-generativeai
-pdfplumber
