@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "GIT"]
+	url = https://github.com/Sayambar2004/Resume-Analyzer.git
+	fetch = +refs/heads/*:refs/remotes/GIT/*
+[branch "master"]
+	remote = GIT
+	merge = refs/heads/master
