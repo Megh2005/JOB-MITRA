@@ -17,6 +17,8 @@ import {
 import { updateApplicationStatus } from "@/api/apiApplication";
 import useFetch from "@/hooks/use-fetch";
 import { BarLoader } from "react-spinners";
+import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 
 const ApplicationCard = ({ application, isCandidate = false }) => {
   const handleDownload = () => {
@@ -75,20 +77,25 @@ const ApplicationCard = ({ application, isCandidate = false }) => {
             Status: {application.status}
           </span>
         ) : (
-          <Select
-            onValueChange={handleStatusChange}
-            defaultValue={application.status}
-          >
-            <SelectTrigger className="w-52">
-              <SelectValue placeholder="Application Status" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="applied">Applied</SelectItem>
-              <SelectItem value="interviewing">Interviewing</SelectItem>
-              <SelectItem value="hired">Hired</SelectItem>
-              <SelectItem value="rejected">Rejected</SelectItem>
-            </SelectContent>
-          </Select>
+          <div>
+            <Select
+              onValueChange={handleStatusChange}
+              defaultValue={application.status}
+            >
+              <SelectTrigger className="w-52">
+                <SelectValue placeholder="Application Status" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="applied">Applied</SelectItem>
+                <SelectItem value="interviewing">Interviewing</SelectItem>
+                <SelectItem value="hired">Hired</SelectItem>
+                <SelectItem value="rejected">Rejected</SelectItem>
+              </SelectContent>
+            </Select>
+            <Link to="https://interview-app-aunt.onrender.com/">
+              <Button variant="destructive">Take Interview</Button>
+            </Link>
+          </div>
         )}
       </CardFooter>
     </Card>

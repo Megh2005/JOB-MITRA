@@ -21,8 +21,12 @@ const TranslateComponent = () => {
     intervalid = setInterval(checkGoogleTranslate, 100);
   }, []);
   return (
-    <div className="w-screen">
-      <div className="w-screen overflow-scroll" ref={googleTranslateRef}></div>
+    <div>
+      <div
+        id="google_translate_element"
+        className="flex items-center"
+        ref={googleTranslateRef}
+      ></div>
     </div>
   );
 };

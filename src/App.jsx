@@ -81,9 +81,7 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="pb-5">
         <Translate />
-      </div>
       <RouterProvider router={router} />
     </ThemeProvider>
   );

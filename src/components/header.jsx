@@ -8,7 +8,15 @@ import {
   useUser,
 } from "@clerk/clerk-react";
 import { Button } from "./ui/button";
-import { BriefcaseBusiness, Heart, HomeIcon, PenBox } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  GraduationCap,
+  Heart,
+  HomeIcon,
+  MessageCircleHeart,
+  PenBox,
+  UserRoundCheck,
+} from "lucide-react";
 
 const Header = () => {
   const [showSignIn, setShowSignIn] = useState(false);
@@ -55,11 +63,38 @@ const Header = () => {
                 </Button>
               </Link>
             )}
+            {user?.unsafeMetadata?.role === "recruiter" && (
+              <Link to="https://ai-hr-tjp.streamlit.app">
+                <Button variant="destructive" className="rounded-full">
+                  <UserRoundCheck size={20} className="mr-2" />
+                  AI HR
+                </Button>
+              </Link>
+            )}
             {user?.unsafeMetadata?.role === "candidate" && (
-              <Link to="https://heritageit.edu" target="_blank">
+              <Link
+                to="https://resume-analyzer-tjp.streamlit.app"
+                target="_blank"
+              >
                 <Button variant="destructive" className="rounded-full">
                   <PenBox size={20} className="mr-2" />
                   Analyze Resume
+                </Button>
+              </Link>
+            )}
+            {user?.unsafeMetadata?.role === "candidate" && (
+              <Link to="http://atmanirvar.vercel.app">
+                <Button variant="destructive" className="rounded-full">
+                  <GraduationCap size={20} className="mr-2" />
+                  Upskill Yourself
+                </Button>
+              </Link>
+            )}
+            {user?.unsafeMetadata?.role === "candidate" && (
+              <Link to="https://sanlap.vercel.app">
+                <Button variant="destructive" className="rounded-full">
+                  <MessageCircleHeart size={20} className="mr-2" /> Chat With
+                  Expert
                 </Button>
               </Link>
             )}

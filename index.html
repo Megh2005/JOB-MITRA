@@ -16,9 +16,47 @@
     />
   </head>
   <body>
+    <style>
+      .goog-te-combo {
+        /* Adjust the width and layout to make it more horizontal */
+        display: inline-block;
+        width: auto; /* Adjust the width as needed */
+        margin: 0;
+        padding: 0;
+      }
+
+      .goog-te-menu-frame {
+        /* Customize the dropdown menu appearance */
+        width: auto !important; /* Override default width */
+      }
+
+      .goog-te-menu2 {
+        /* Adjust menu layout if needed */
+        display: flex;
+        flex-direction: row;
+      }
+
+      .goog-te-menu2-item {
+        /* Style individual items */
+        display: inline-block;
+      }
+    </style>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTanslateElementInit"
+    ></script>
   </body>
-  <script src="https://code.jquerry.com/jquerry-3.4.1.min.js"></script>
-  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTanslateElementInit"></script>
 </html>

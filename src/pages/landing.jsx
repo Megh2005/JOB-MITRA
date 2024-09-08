@@ -57,14 +57,14 @@ const LandingPage = () => {
           }}
           plugins={[
             Autoplay({
-              delay: 2000,
+              delay: 750,
             }),
           ]}
           className="w-full py-10"
         >
           <CarouselContent className="flex gap-5 sm:gap-20 items-center">
             {companies.map(({ name, id, path }) => (
-              <CarouselItem key={id} className="basis-1/3 lg:basis-1/4 ">
+              <CarouselItem key={id} className="basis-1/3 lg:basis-1/3 ">
                 <img
                   src={path}
                   alt={name}
@@ -82,10 +82,10 @@ const LandingPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-              sequi illum sunt maiores excepturi ducimus? Reiciendis quisquam
-              reprehenderit error, unde provident repellendus officiis iusto
-              incidunt.
+              For internship seekers we have a huge range of internships as per
+              their skillset and preffered location. We also have an ATS resume
+              analyzer and an upskillig platform for their upskillment and
+              faster progress
             </CardContent>
           </Card>
           <Card>
@@ -93,9 +93,10 @@ const LandingPage = () => {
               <CardTitle className="font-bold">For Employers</CardTitle>
             </CardHeader>
             <CardContent>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores
-              saepe id quaerat optio beatae quos explicabo. Cupiditate officiis
-              similique totam, quo molestias sint magni doloremque.
+              For recruiters we have a platform to host their internships as
+              well as we have a realtime databased resume analysis and AI HR
+              platform as well as we have a in app virtual interview
+              tracker with fetched hooks and state updations
             </CardContent>
           </Card>
         </section>
