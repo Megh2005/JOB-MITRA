@@ -64,7 +64,7 @@ const Header = () => {
               </Link>
             )}
             {user?.unsafeMetadata?.role === "recruiter" && (
-              <Link to="https://ai-hr-tjp.streamlit.app">
+              <Link target="_blank" to="https://hr-at-tjp.streamlit.app/">
                 <Button variant="destructive" className="rounded-full">
                   <UserRoundCheck size={20} className="mr-2" />
                   AI HR
@@ -73,7 +73,7 @@ const Header = () => {
             )}
             {user?.unsafeMetadata?.role === "candidate" && (
               <Link
-                to="https://resume-analyzer-tjp.streamlit.app"
+                to="https://tjp-resume-analyzer.streamlit.app"
                 target="_blank"
               >
                 <Button variant="destructive" className="rounded-full">
