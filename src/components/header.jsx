@@ -90,14 +90,14 @@ const Header = () => {
                 </Button>
               </Link>
             )}
-            {user?.unsafeMetadata?.role === "candidate" && (
+            {/* {user?.unsafeMetadata?.role === "candidate" && (
               <Link to="https://sanlap.vercel.app">
                 <Button variant="destructive" className="rounded-full">
                   <MessageCircleHeart size={20} className="mr-2" /> Chat With
                   Expert
                 </Button>
               </Link>
-            )}
+            )} */}
             <UserButton
               appearance={{
                 elements: {
