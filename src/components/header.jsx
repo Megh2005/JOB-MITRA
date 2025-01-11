@@ -71,33 +71,6 @@ const Header = () => {
                 </Button>
               </Link>
             )}
-            {user?.unsafeMetadata?.role === "candidate" && (
-              <Link
-                to="https://tjp-resume-analyzer.streamlit.app"
-                target="_blank"
-              >
-                <Button variant="destructive" className="rounded-full">
-                  <PenBox size={20} className="mr-2" />
-                  Analyze Resume
-                </Button>
-              </Link>
-            )}
-            {user?.unsafeMetadata?.role === "candidate" && (
-              <Link to="http://atmanirvar.vercel.app">
-                <Button variant="destructive" className="rounded-full">
-                  <GraduationCap size={20} className="mr-2" />
-                  Upskill Yourself
-                </Button>
-              </Link>
-            )}
-            {/* {user?.unsafeMetadata?.role === "candidate" && (
-              <Link to="https://sanlap.vercel.app">
-                <Button variant="destructive" className="rounded-full">
-                  <MessageCircleHeart size={20} className="mr-2" /> Chat With
-                  Expert
-                </Button>
-              </Link>
-            )} */}
             <UserButton
               appearance={{
                 elements: {
