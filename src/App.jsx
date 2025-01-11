@@ -10,7 +10,6 @@ import SavedJob from "./pages/saved-job";
 import MyJobs from "./pages/my-jobs";
 import Error from "./pages/error";
 import { ThemeProvider } from "@/components/theme-provider";
-import Translate from "./TranslateComponent";
 import "./App.css";
 import ProtectedRoute from "./components/protected-route";
 
@@ -82,10 +81,6 @@ const App = () => {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="app-container">
-        <header>
-          <Translate />{" "}
-          {/* You can move the Translate component to a header section */}
-        </header>
         <main>
           <RouterProvider router={router} />
         </main>
